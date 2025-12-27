@@ -1,0 +1,17 @@
+name: First devops project
+
+on:
+  push:
+    branches: ["main"]
+jobs:
+  test-run:
+    runs-on: ubuntu latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+
+      - name: run pipeline test
+        run: echo "pipeline running"
+
+      
